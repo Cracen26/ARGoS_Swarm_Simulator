@@ -315,6 +315,22 @@ namespace argos {
        * @see CPhysicsModel::CalculateBoundingBox()
        */
       void CalculateBoundingBox();
+
+      const CVector3& GetInitOriginPosition() const {
+         return m_cInitOriginPosition;
+      }
+
+      void SetInitOriginPosition(const CVector3& c_pos) {
+         m_cInitOriginPosition = c_pos;
+      }
+
+      const CQuaternion& GetInitOriginOrientation() const {
+         return m_cInitOriginOrientation;
+      }
+      
+      void SetInitOriginOrientation(const CQuaternion& c_orient) {
+         m_cInitOriginOrientation = c_orient;
+      }
       
    protected:
       
