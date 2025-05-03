@@ -43,14 +43,16 @@ namespace argos {
    /****************************************/
 
    void CDefaultVisualization::Execute() {
-      /* Main cycle */
-      while(!m_cSimulator.IsExperimentFinished()) {
-         (this->*m_tStepFunction)();
-      }
-      /* The experiment is finished */
-      m_cSimulator.GetLoopFunctions().PostExperiment();
-      LOG.Flush();
-      LOGERR.Flush();
+      do {
+         /* Main cycle */
+         while(!m_cSimulator.IsExperimentFinished()) {
+            (this->*m_tStepFunction)();
+         }
+         /* The experiment is finished */
+         m_cSimulator.GetLoopFunctions().PostExperiment();
+         LOG.Flush();
+         LOGERR.Flush();
+      } while(!m_cSimulator.IsExperimentFinished());
    }
 
    /****************************************/

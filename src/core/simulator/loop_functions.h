@@ -146,6 +146,10 @@ namespace argos {
        * method is executed before Destroy().
        * You can use this method to perform final calculations at the
        * end of an experiment.
+       * Do not use this method to destroy or delete stuff, because additional
+       * calls to CSimulator::IsExperimentFinished() will occur to make it
+       * possible for calls to CSimulator::Reset() to work as intended when
+       * done within PostExperiment().
        * The default implementation of this method does nothing.
        */
       virtual void PostExperiment() {
