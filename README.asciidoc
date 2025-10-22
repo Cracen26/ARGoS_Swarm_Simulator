@@ -1,6 +1,3 @@
-ARGoS Simulator base repository: https://github.com/ilpincy/argos3
-
-
 # Repository Duplication Notice
 
 This repository is a **duplicate** of the original project available here:  
