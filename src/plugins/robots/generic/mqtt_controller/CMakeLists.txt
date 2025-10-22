@@ -1,0 +1,5 @@
+add_library(argos3plugin_simulator_mqttcontroller SHARED mqtt_controller.cpp)
+target_link_libraries(argos3plugin_simulator_mqttcontroller
+  argos3core_simulator
+  mosquitto)
+
